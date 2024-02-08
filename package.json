@@ -1,0 +1,22 @@
+{
+  "name": "forms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "forms",
+  "author": "danielleklaasen",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^5.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

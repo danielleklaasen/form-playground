@@ -1,0 +1,12 @@
+.form-input {
+    padding: 4px;
+}
+
+.error-message {
+    color: red;
+    display: none;
+}
+
+input:invalid~.error-message {
+    display: block;
+}
