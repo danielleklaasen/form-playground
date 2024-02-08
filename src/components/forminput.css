@@ -7,6 +7,10 @@
     display: none;
 }
 
-input:invalid~.error-message {
+input:invalid[is-dirty="true"] {
+    border: 1px solid red;
+}
+
+input:invalid[is-dirty="true"]~.error-message {
     display: block;
 }

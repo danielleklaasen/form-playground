@@ -13,28 +13,30 @@ const FormPage = () => {
             name: 'name',
             placeholder: 'Name',
             label: 'Name',
-            errorMessage: '',
-            required: true
         },
         {
             id: 2,
             name: 'email',
             placeholder: 'E-mail',
             label: 'E-mail',
-            errorMessage: 'Invalid email address'
+            type: 'email',
+            errorMessage: 'Invalid email address',
+            pattern: "[^@\s]+@[^@\s]+",
+            required: true
         },
         {
             id: 3,
             name: 'message',
             placeholder: 'Message',
             label: 'Message',
-            errorMessage: ''
+            errorMessage: 'Message is required',
+            required: true,
         }
     ]
 
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log('Submit');
+        console.log('Submit', values);
     };
 
     const onChange = (e) => {
@@ -52,6 +54,7 @@ const FormPage = () => {
             {inputs.map(input => (
                 <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
             ))}
+            <button>Submit</button>
         </form>
     )
 }
